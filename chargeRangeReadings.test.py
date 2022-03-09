@@ -4,7 +4,7 @@ import chargeRangeReadings
 class chargeRangeReadingsTest(unittest.TestCase):
   
   def test(self):
-    getFreqOfChargeRanges([4,2])
+    chargeRangeReadings.getFreqOfChargeRanges([2,3,4,6])
 
 
 if __name__ == '__main__':
