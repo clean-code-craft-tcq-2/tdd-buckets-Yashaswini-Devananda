@@ -1,5 +1,3 @@
-# charge_readings = [1,2]
-# charge_readings = [1,2]
 # charge_readings = [1,2,4,6,8,9,11,12]
 charge_readings = [1,2,4,10,1,2,3,4,6,8,9,11,12]
 
@@ -12,7 +10,7 @@ def getSortedListofUniqueItems(listOfItems):
     
 def get_ListOfContinousRanges(charge_readings):
     listOfItems = getSortedListofUniqueItems(charge_readings)
-    print(listOfItems)
+    # print(listOfItems)
     listOfRange=[]
     rangeDict = { "min":listOfItems[0],"max":listOfItems[0],"freq":0}
     for item in listOfItems:
@@ -44,11 +42,17 @@ def updateFreqOfRange(listOfRange,charge_readings):
     return listOfRange        
     
 def output_to_console(listOfRange):
+    responseText = ""
     for item in listOfRange:
-        print (f"{item['min']}-{item['max']}, {item['freq']}")
+        responseText = f"{responseText} {item['min']}-{item['max']}, {item['freq']} \n"
+        # print (responseText)
+    return responseText
             
-    
-listOfRange = get_ListOfContinousRanges(charge_readings)
-listOfRange = updateFreqOfRange(listOfRange,charge_readings)
+def getFreqOfChargeRanges(InputList):
+    charge_readings = InputList
+    listOfRange = get_ListOfContinousRanges(charge_readings)
+    listOfRange = updateFreqOfRange(listOfRange,charge_readings)
+    responseText = output_to_console(listOfRange)
+    return responseText
 
-output_to_console(listOfRange)
+# print (getFreqOfChargeRanges())
