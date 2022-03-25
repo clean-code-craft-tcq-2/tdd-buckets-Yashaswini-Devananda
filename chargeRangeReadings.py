@@ -1,6 +1,3 @@
-# charge_readings = [1,2,4,6,8,9,11,12]
-charge_readings = [1,2,4,10,1,2,3,4,6,8,9,11,12]
-
 def getSortedListofUniqueItems(listOfItems):
     setofList = set(listOfItems)
     sortedList = list(setofList)
