@@ -11,7 +11,7 @@ class chargeRangeReadingsTest(unittest.TestCase):
     print (chargeRangeReadings.getFreqOfChargeRanges([5,6,10,11,12,14,16,17,21,25,24,26]))
 
 if __name__ == '__main__':
-unittest.main()
+  unittest.main()
   
   
   
