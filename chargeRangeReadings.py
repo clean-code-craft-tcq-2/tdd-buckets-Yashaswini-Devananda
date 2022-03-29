@@ -1,3 +1,4 @@
+new_line = '\n'
 ADC_12Bit = {"max_permissible_value" : 4094 , "intercept" : 0 , "max_current_range" : 10}
 ADC_10Bit = {"max_permissible_value" : 511 , "intercept" : 511 , "max_current_range" : 15}
 
