@@ -2,7 +2,7 @@ ADC_12Bit = {"max_permissible_value" : 4094 , "intercept" : 0 , "max_current_ran
 ADC_10Bit = {"max_permissible_value" : 511 , "intercept" : 511 , "max_current_range" : 15}
 
 
-def map_adc_values_to_range(A2Dvalues, ADC_dict):
+def map_adc_values_to_amps(A2Dvalues, ADC_dict):
     result=[]
     for value in A2Dvalues:
         value -= ADC_dict["intercept"]
@@ -57,7 +57,7 @@ def output_to_console(listOfRange):
     
 
 def getFreqOfChargeRanges(InputList, ADC_dict):
-    charge_readings = map_adc_values_to_range(InputList,ADC_dict)
+    charge_readings = map_adc_values_to_amps(InputList,ADC_dict)
     listOfRange = get_ListOfContinousRanges(charge_readings)
     listOfRange = updateFreqOfRange(listOfRange,charge_readings)
     responseText = output_to_console(listOfRange)
