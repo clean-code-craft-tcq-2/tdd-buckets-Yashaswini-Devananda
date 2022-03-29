@@ -20,7 +20,6 @@ def get_ListOfContinousRanges(charge_readings):
     
     listOfRange.append(rangeDict.copy()) # store the last items
     
-    # print(listOfRange)      
     return listOfRange
     
     
@@ -51,5 +50,3 @@ def getFreqOfChargeRanges(InputList):
     listOfRange = updateFreqOfRange(listOfRange,charge_readings)
     responseText = output_to_console(listOfRange)
     return responseText
-
-# print (getFreqOfChargeRanges())
