@@ -16,6 +16,7 @@ class chargeRangeReadingsTest(unittest.TestCase):
     self.assertTrue(chargeRangeReadings.getFreqOfChargeRanges([511], chargeRangeReadings.ADC_10Bit) == "0-0, 1\n")
     self.assertTrue(chargeRangeReadings.getFreqOfChargeRanges([1022], chargeRangeReadings.ADC_10Bit) == "15-15, 1\n")
     self.assertTrue(chargeRangeReadings.getFreqOfChargeRanges([1022,1023], chargeRangeReadings.ADC_10Bit) == "15-15, 1\n")#ignore error readings
+    self.assertTrue(chargeRangeReadings.getFreqOfChargeRanges([0,100,150,300,500,70,1500,700,600,2000,1022], chargeRangeReadings.ADC_10Bit) == "-15--15, 1 \n -13--11, 3 \n -6--6, 1 \n 0-0, 1 \n 3-3, 1 \n 6-6, 1 \n 15-15, 1 \n")
 
     
 if __name__ == '__main__':
