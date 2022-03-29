@@ -7,7 +7,7 @@ def map_adc_values_to_range(A2Dvalues, ADC_dict):
     for value in A2Dvalues:
         value -= ADC_dict["intercept"]
         if value<=ADC_dict["max_permissible_value"] :
-            result.append(round(((value)/ADC_dict["max_permissible_value"])*ADC_dict["max_current_range"]))
+            result.append(abs(round(((value)/ADC_dict["max_permissible_value"])*ADC_dict["max_current_range"])))
     return result
 
 
