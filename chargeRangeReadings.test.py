@@ -8,7 +8,7 @@ class chargeRangeReadingsTest(unittest.TestCase):
     self.assertTrue(chargeRangeReadings.getFreqOfChargeRanges([0], chargeRangeReadings.ADC_12Bit) == "0-0, 1\n")
     self.assertTrue(chargeRangeReadings.getFreqOfChargeRanges([4094], chargeRangeReadings.ADC_12Bit) == "10-10, 1\n")
     self.assertTrue(chargeRangeReadings.getFreqOfChargeRanges([4094,4095], chargeRangeReadings.ADC_12Bit) == "10-10, 1\n")#ignore error readings
-    self.assertTrue(chargeRangeReadings.getFreqOfChargeRanges([0,4000], chargeRangeReadings.ADC_12Bit) == "0-0, 1 \n10-10, 1 \n")
+    self.assertTrue(chargeRangeReadings.getFreqOfChargeRanges([0,4000], chargeRangeReadings.ADC_12Bit) == "0-0, 1 \n 10-10, 1 \n")
 #     print (chargeRangeReadings.getFreqOfChargeRanges([0,100,200,400,500,1000,1500,2500,3000,3500,4000], chargeRangeReadings.ADC_12Bit)
     
     
