@@ -49,9 +49,11 @@ def updateFreqOfRange(listOfRange,charge_readings):
     return listOfRange        
     
     
-def output_to_console(listOfRange):
+def output_to_console(listOfRange):    
+    result = ""
     for item in listOfRange:
-        print (f"{item['min']}-{item['max']}, {item['freq']}")
+        result += (f"{item['min']}-{item['max']}, {item['freq']}{new_line}")
+    return result
     
 
 def getFreqOfChargeRanges(InputList, ADC_dict):
