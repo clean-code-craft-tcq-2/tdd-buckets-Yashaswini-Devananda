@@ -40,6 +40,7 @@ def updateFrequencyOfReading(reading,listOfRange):
         if(reading <= rangeItem["max"]):
             rangeItem["freq"]=rangeItem["freq"]+1
             return listOfRange
+    return listOfRange
     
     
 def updateFreqOfRange(listOfRange,charge_readings):
