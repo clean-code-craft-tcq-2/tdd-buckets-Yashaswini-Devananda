@@ -61,3 +61,4 @@ def getFreqOfChargeRanges(InputList, ADC_dict):
     listOfRange = updateFreqOfRange(listOfRange,charge_readings)
     responseText = output_to_console(listOfRange)
     return responseText
+
