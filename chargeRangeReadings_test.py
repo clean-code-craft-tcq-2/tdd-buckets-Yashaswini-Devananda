@@ -20,8 +20,7 @@ class chargeRangeReadingsTest(unittest.TestCase):
     self.assertTrue(chargeRangeReadings.getFreqOfChargeRanges([0,100,150,300,500,70,1500,700,600,2000,1022], chargeRangeReadings.ADC_10Bit) == "0-0, 1\n3-3, 1\n6-6, 2\n11-13, 3\n15-15, 2\n")
 
     
-if __name__ == '__main__':
-  unittest.main()
+unittest.main()
   
   
   
